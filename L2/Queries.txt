@@ -1,0 +1,18 @@
+Data för olika studenter / lärare
+
+insert into
+borrowed_resources(physical_resource_id, user_id, expiry_date, borrow_date, return_date)
+values(85, 18, (select current_date) - integer '3', (select current_date) - integer '24', NULL ),
+(82, 20, (select current_date) - integer '1', (select current_date) - integer '22', null),
+(80, 22, (select current_date) - integer '2' , (select current_date) - integer '23', null),
+(79, 23, (select current_date) - integer '10', (select current_date) - integer '31', null),
+(77, 25, (select current_date) - integer '12', (select current_date) - integer '33', null);
+
+
+insert into fines(borrowed_resource_id, amount, paid, days_overdue)
+values(31, 125, 'f', 5),
+(32,115, 'f', 3)
+,(33, 120, 'f', 4),
+(34, 160, 'f', 12),
+(35, 170, 'f', 14)
+;
