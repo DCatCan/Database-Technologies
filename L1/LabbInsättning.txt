@@ -1,0 +1,77 @@
+
+
+
+%Insättning från temp_tables till våra tables
+
+Insert into users(full_name, date_of_birth, phone_number, address, email, admin, department)
+select * from temp_user;
+
+insert into resources(title, media_type, publication_date, available_copies)
+select title, 'book' as mediatype, publicationdate, 1 as copies			%medans detta kör man sedan en update på och all media är "Book"
+from info_table ;
+
+%taggings
+insert into taggings (select a.resource_id as resource_id, c.tag_id as tag_id from resources as a
+left join tags2 as b on a.title = b.title
+left join tags as c on b.value = c.value
+where tag_id is not null);
+
+
+% från en temp table så fixade vi en join funktion för att bara få ett av alla tags
+
+insert into tags(key, value) select final.key, final.value from (select lol.key, lol.value from (select distinct on (this.value) value, this.key as key from (select a.key, b.value from
+(select key from temptag group by key) as a
+left join tags2 as b on b.key = a.key
+left join (select value from temptag group by value) as c on b.value = c.value
+where b.value is not null)as this) as lol) as final;
+
+%borrowed resources ett av exemplen, detta är för ett försenat tidigare lån asd
+
+insert into borrowed_resources(physical_resource_id, user_id, expiry_date, borrow_date, return_date)
+select a.physical_resource_id, b.user_id, current_date - interval '11 weeks' + interval '3 weeks', current_date - interval '11 weeks',current_date - interval '11 weeks' + interval '3 weeks' + interval '3 days'
+from physical_resources as a, users as b
+where a.physical_resource_id = 16 and b.user_id = 29;
+
+%insättning för fines
+
+with days_overdue as (select a.id, a.date_part as overdue from (select borrowed_resource_id as id,extract(day from age(return_date, expiry_date)) from borrowed_resources) as a
+where a.date_part > 0),
+amount as (select id, a.overdue*5+100 as amount from days_overdue as a)
+insert into fines(borrowed_resource_id, amount, days_overdue) select a.borrowed_resource_id, b.amount, c.overdue from borrowed_resources as a, amount as b, days_overdue as c
+where a.borrowed_resource_id = b.id and a.borrowed_resource_id = c.id;
+
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+%Insättning till temp_tables
+\copy temp_table from bookInput.csv (format csv, header, delimiter ';');
+\copy temp_table from userInput.csv (format csv, header, delimiter ';');
+
+Hjälp tables
+%för o skapa en table med alla tags samt titles för att kunna lägga in alla senare i tags samt tagging.
+
+insert into tags2(title, key, value)
+select title, 'author' as tags, author from info_table
+union
+select title, 'langauge' as tags, language from info_table
+union....
+
+
+create table temp(id int, title character varying, media_type character varying, pubdate date, prequel_id int);
+
+alter table temp
+add column quantity int;
+
+%get temp listan antal böcker
+
+update temp
+set quantity = 1;
+
+update temp
+set quantity = 2 where id = 1 or id = 3 or id = 4 or id = 5 or id = 14 or id = 17;
+
+insert into borrowed_resources(physical_resource_id, user_id, expiry_date, borrow_date, return_date)
+miwink-> a.physical_resource_id, b.user_id, , current_date as date,
+
+

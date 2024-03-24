@@ -1,0 +1,31 @@
+Name;Date_of_birth;Phonenumber;Address;Email;Admin;Program
+Gabriella Noyer;1970-12-02;;Norrfjäll 93;gn@lms.se;f;Computer science
+Ida Kästner;1981-04-13;;Dadelvägen 48;Iik@lms.se;f;Biotechnology
+Fouad Caro;1982-04-14;;Storgatan 61;fc@lms.se;f;Biotechnology
+Salomon Ahlgren;1983-12-29;;Karlsängen 44;sa@lms.se;f;Engingeering Chemistry
+Titos Wuopio;1984-06-10;;Kaptensgränd 89;tw@lms.se;f;Engineering physics
+Hakim Adolvsson;1985-08-30;;Eriksbo 16;ha@lms.se;f;Computer science
+Georgine Stieber;1986-09-08;;Skärpinge 37;gs@lms.se;f;Vehical engineering
+Ragnhild Gage;1990-12-12;;Tuvvägen 60;rg@lms.se;f;Mechanical engineering
+Nima Herrera;1993-02-22;;Kantorsvägen 6;nh@lms.se;f;Vehical engineering
+Tove Pallesen;1993-05-21;;Edeby 80;tp@lms.se;f;Engineering physics
+Francesco Svensson;1994-04-23;;Knektvägen 63;fs@lms.se;f;Computer science
+Otto Taube;2002-02-27;;Nybyvägen 44;ot@lms.se;f;Mechanical engineering
+Angelika Boehler;2008-01-10;;Figgeberg Gårdeby 31;ab@lms.se;f;Biotechnology
+Britt Baumbach;2008-04-11;;Backsippestigen 41;bb@lms.se;f;Architecture
+Ina Lange;2008-10-18;;Stallstigen 70;il@lms.se;f;Computer science
+Gloria Ellis;1946-11-16;4957732840;Kvillevägen 44;ge@lms.se;t;Agency of Data Control
+Wilma Mcdonald;1948-02-25;3557484137;Buanvägen 75;wm@lms.se;t;Agency of Telecommunications Hardware Technology
+Denise Webster;1951-01-23;9824722797;Alsteråvägen 82;dw@lms.se;t;Branch of On-Line Internet Administration and Intranet Networking
+Nellie Vaughn;1955-11-28;7224186750;Tuvvägen 19;nv@lms.se;t;Branch of Wireless Hardware Programming
+Ethel Stone;1962-12-19;5712665248;Barrgatan 50;es@lms.se;t;Bureau of Internet Security
+Troy Greer;1968-04-12;4292539249;Näsåkersv 65;tg@lms.se;t;Bureau of Software Administration
+Ray Pope;1968-05-06;2920735252;Nästvattnet 41;rp@lms.se;t;Bureau of Telecommunications Mainframe Development
+Martha Ballard;1971-12-29;8626937767;Kaptensgränd 28;mb@lms.se;t;Department of Code Acquisition and Networking
+Kevin Byrd;1973-10-27;6607649809;Edeby 96;kb@lms.se;t;Department of Intranet Backup
+Jonathon Carroll;1974-04-17;1370977282;Idvägen 67;jc@lms.se;t;Hardware Security Department
+Louis Gregory;1987-01-24;8922841353;Hammarvägen 35;lg@lms.se;t;Mainframe Intranet Backup Department
+Darrin Ramirez;1989-06-01;7276541006;Lemesjö 4;dr@lms.se;t;Mainframe Programming Networking and Multimedia Control Team
+Sylvester Brown;1990-07-22;5040445061;Sandlyckan 99;sb@lms.se;t;Object-Oriented Data Implementation and Analytical Software Programming Committee
+Marian Buchanan;1995-06-13;5661533246;Kaptensgränd 98;mb@lms.se;t;Portable Database Security and Application Implementation Division
+Phyllis Barnes;1999-11-04;3952497320;Hagaskog 66;pb@lms.se;t;Software Implementation Department
