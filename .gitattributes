@@ -1,6 +1,2 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-git add DD1368L3_queries/
-git add databaseL2_queries/
-git add L1/
-
